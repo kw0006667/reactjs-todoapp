@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-// import App from './App';
-import TodoApp from './TodoApp';
-import registerServiceWorker from './registerServiceWorker';
-import 'bootstrap/dist/css/bootstrap.css';
 
-// ReactDOM.render(<TodoApp />, document.getElementById('container'));
+import './index.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap-theme.css';
+
+import registerServiceWorker from './registerServiceWorker';
+import TodoApp from './TodoApp';
+
 ReactDOM.render(
     <TodoApp/>,
     document.getElementById('container')
