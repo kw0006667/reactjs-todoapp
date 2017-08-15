@@ -19,10 +19,10 @@ class TodoApp extends Component {
     };
 
     // TODO : Should be fixed in ES6
-    // this.updateItems = this.updateItems.bind(this);
-    // this.delete = this.delete.bind(this);
-    // this.filterItem = this.filterItem(this);
-    // this.searchItem = this.searchItem(this);
+    this.updateItems = this.updateItems.bind(this);
+    this.deleteItem = this.deleteItem.bind(this);
+    this.filterItem = this.filterItem.bind(this);
+    this.searchItem = this.searchItem.bind(this);
   }
 
   updateItems(newItem) {
@@ -33,7 +33,7 @@ class TodoApp extends Component {
     });
   }
 
-  delete(index) {
+  deleteItem(index) {
     var newData = this.state.items.slice(); // copy array
     newData.splice(index, 1); // remove element
     this.setState({

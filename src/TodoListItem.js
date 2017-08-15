@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 
 class TodoListItem extends Component {
+  constructor(props) {
+    super(props);
+
+    this.changeHandler = this.changeHandler.bind(this);
+    this.removeHandler = this.removeHandler.bind(this);
+  }
+  
   changeHandler(e) {
     this.setState({
       value: e.target.checked

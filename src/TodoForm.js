@@ -7,6 +7,9 @@ class TodoForm extends Component {
     this.state = {
       item: ''
     };
+
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.onChange = this.onChange.bind(this);
   }
 
   handleSubmit(e) {
@@ -28,7 +31,7 @@ class TodoForm extends Component {
       <div className="row">
         <form onSubmit={this.handleSubmit}>
           <div className="form-group col-sm-10">
-            <input type='text' className="todoField form-control" ref='item' onChange={this.onChange.bind(this)} value={this.state.item} />
+            <input type='text' className="todoField form-control" ref='item' onChange={this.onChange} value={this.state.item} />
             <input type='submit' className="btn btn-default" style={{ "float": "left", "marginLeft": "5px" }} value='Add' />
           </div>
         </form>

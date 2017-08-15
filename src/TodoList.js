@@ -3,6 +3,12 @@ import React, { Component } from 'react';
 import TodoListItem from './TodoListItem';
 
 class TodoList extends Component {
+  constructor(props) {
+    super(props);
+
+    this.remove = this.remove.bind(this);
+  }
+
   remove(e) {
     this.props.onDelete(e);
   }
