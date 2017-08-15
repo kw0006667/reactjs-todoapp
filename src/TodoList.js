@@ -25,10 +25,10 @@ class TodoList extends Component {
 
     var status = this.props.filter[0].Status;
     switch (status) {
-      case 'false':
+      case 'Incompleted':
         allitems = allitems.filter(t => !t.isDone);
         break;
-      case 'true':
+      case 'Completed':
         allitems = allitems.filter(t => t.isDone);
         break;
       default:
@@ -49,7 +49,7 @@ class TodoList extends Component {
       return <ul>{queryResult.map(createItem, this)}</ul>;
     }
 
-    return <ul>{this.props.items.map(createItem, this)}</ul>
+    return <ul>{allitems.map(createItem, this)}</ul>
   }
 }
 

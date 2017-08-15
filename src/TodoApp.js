@@ -18,7 +18,6 @@ class TodoApp extends Component {
       ]
     };
 
-    // TODO : Should be fixed in ES6
     this.updateItems = this.updateItems.bind(this);
     this.deleteItem = this.deleteItem.bind(this);
     this.filterItem = this.filterItem.bind(this);
@@ -42,7 +41,7 @@ class TodoApp extends Component {
   }
 
   filterItem(e) {
-    this.state.filter[0].Status = e.target.value;
+    this.state.filter[0].Status = e.target.attributes[1].value;   // It is a workaround caused undefined value by e.target.value
     this.setState({
       filter: this.state.filter
     });

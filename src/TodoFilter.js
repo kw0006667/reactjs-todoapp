@@ -23,8 +23,8 @@ class TodoFilter extends Component {
         <div className="col-xs-5">
           <ul className="nav nav-pills todo-filter">
             <li><a onClick={onFilter1} className={this.isActive('SHOW_ALL')} value="SHOW_ALL">All</a></li>
-            <li><a onClick={onFilter1} className={this.isActive('false')} value="false">Incomplete</a></li>
-            <li><a onClick={onFilter1} className={this.isActive('true')} value="true">Complete</a></li>
+            <li><a onClick={onFilter1} className={this.isActive('Incompleted')} value="Incompleted">Incompleted</a></li>
+            <li><a onClick={onFilter1} className={this.isActive('Completed')} value="Completed">Completed</a></li>
           </ul>
         </div>
       </div>
